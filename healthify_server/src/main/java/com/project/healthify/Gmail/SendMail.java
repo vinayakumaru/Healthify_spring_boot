@@ -43,9 +43,9 @@ public class SendMail {
     private Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT, GsonFactory jsonFactory)
             throws IOException {
         // Load client secrets.
-        InputStream in = SendMail.class.getResourceAsStream("/client_secret_727135022402-gqs2m2u91ljo592g2h6vgmr92ubuie4t.apps.googleusercontent.com.json");
+        InputStream in = SendMail.class.getResourceAsStream("/client_secret.json");
         if (in == null) {
-            throw new FileNotFoundException("Resource not found: " + "/client_secret_727135022402-gqs2m2u91ljo592g2h6vgmr92ubuie4t.apps.googleusercontent.com.json");
+            throw new FileNotFoundException("Resource not found: " + "/client_secret.json");
         }
         GoogleClientSecrets clientSecrets =
                 GoogleClientSecrets.load(jsonFactory, new InputStreamReader(in));
